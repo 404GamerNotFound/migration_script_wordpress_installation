@@ -8,6 +8,12 @@ This README outlines the use of a set of Python scripts designed for automating 
 - MySQL Server installed and operational
 - Terminal or command prompt access
 
+## General Guidelines
+
+- Confirm you have the necessary permissions for script execution and database/file access.
+- Conduct a backup of your database and files before running scripts that alter data.
+- Customize the script variables (e.g., database credentials, file paths, domain names) to suit your backup server's specific configuration.
+
 ## Script Overview
 
 The `master_script.py` orchestrates the execution of several scripts to streamline the preparation of a WordPress backup server. This process includes the extraction of WordPress site files, database importation, and the updating of domain names within both the database and site files.
@@ -35,11 +41,5 @@ This execution will:
 - **Import SQL Dump:** Manages the importation of the WordPress database dump into MySQL, ensuring the data is replicated on the backup server.
 - **Update Domain in Database:** Adjusts references from the old domain to the new domain within the database, aligning links and references with the new environment.
 - **Update Domain in Files:** Searches through WordPress files, updating any occurrence of the old domain with the new domain to ensure site consistency.
-
-## General Guidelines
-
-- Confirm you have the necessary permissions for script execution and database/file access.
-- Conduct a backup of your database and files before running scripts that alter data.
-- Customize the script variables (e.g., database credentials, file paths, domain names) to suit your backup server's specific configuration.
 
 This guide aims to provide a clear method for utilizing the provided scripts to establish a WordPress backup server. For additional information or guidance, feel free to reach out.
